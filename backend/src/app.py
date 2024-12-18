@@ -9,7 +9,10 @@ app=FastAPI(
     description = 'a simple rag api',
     version='0.1',
 )
-origins=['http://localhost:3000']
+origins = [
+    "http://localhost:3000",  # Local development
+    "https://1bac81bb.oshogpt.pages.dev/"  # Deployed frontend URL
+]
 
 app.add_middleware(
     CORSMiddleware,
